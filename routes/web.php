@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PingPongControleur;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,5 @@ Route::get('/', function () {
     return view('welcome', ['titre' => 'Mon premier exemple.']);
 });
 
-Route::get('/ping', function (){
-    return "pong";
-});
+Route::get('/ping', [PingPongControleur::class, 'ping']);
+Route::get('/pong', [PingPongControleur::class, 'pong']);
