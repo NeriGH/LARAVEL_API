@@ -31,3 +31,18 @@
 <!-- protected $fillable = ['table-name1', 'table-name2'];-->
 
 > > php artisan make:model [TABLE-NAME]
+
+# POSTMAN
+
+-   GET
+    http://127.0.0.1:8000/api/concert => ALL DB
+    http://127.0.0.1:8000/api/concert/?id={$id}
+
+-   POST
+    http://127.0.0.1:8000/api/concert/?name={$name}&date={$date}
+
+-   EDIT
+    http://127.0.0.1:8000/api/concert/?id={$id}&name={$name}&date={$date}
+
+-   DELETE
+    http://127.0.0.1:8000/api/concert/{$id}
