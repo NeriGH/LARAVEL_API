@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PingPongControleur;
+use App\Http\Controllers\TodoControleur;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,7 @@ Route::get('/', function () {
 
 Route::get('/ping', [PingPongControleur::class, 'ping']);
 Route::get('/pong', [PingPongControleur::class, 'pong']);
+
+Route::get('/todo', [TodoControleur::class, 'todo']);
+Route::get('/todo', [TodoControleur::class, 'listTodo']);
+Route::get('/todoForm', [TodoControleur::class, 'addTodo']);
