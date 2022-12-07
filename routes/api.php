@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiControler;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/concert', [ApiControler::class, 'listApi']);
+Route::get('/concert', [ApiControler::class, 'findApi']);
+Route::post('/concert', [ApiControler::class, 'createApi']);
+Route::delete('/concert/{id}', [ApiControler::class, 'deleteApi']);
+Route::put('/concert', [ApiControler::class, 'editApi']);
